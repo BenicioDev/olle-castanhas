@@ -10,9 +10,12 @@ export default function Header() {
     return (
         <div className="header-container">
             <div className="logo">
-                <img
+                <Image
                     class="img-logo"
-                    src="/header/ollie-semBG.png"
+                    width={195}
+                    height={65}
+                    style={{borderRadius: '6px'}}
+                    src="/header/ultima.png"
                 />
             </div>
             <div className="search-bar">

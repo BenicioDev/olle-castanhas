@@ -1,16 +1,33 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Input, Badge } from 'antd';
+import { SearchOutlined, ShoppingCartOutlined, UserOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import './header.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
-        <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
-            <Link to="/" className="text-xl font-bold">Loja Online</Link>
-            <nav>
-                <ul className="flex space-x-4">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">Sobre</Link></li>
-                    <li><Link to="/contact">Contato</Link></li>
-                </ul>
-            </nav>
-        </header>
+        <div className="header-container">
+            <div className="logo"> <Link to="/">LOGO</Link></div>
+            <div className="search-bar">
+                <Input
+                    placeholder="O que deseja procurar?"
+                    prefix={<SearchOutlined style={{ color: '#004D4D' }} />}
+                />
+            </div>
+            <div className="menu-icons">
+                <div className="menu-item">
+                    <QuestionCircleOutlined className="icon" /> Atendimento
+                </div>
+                <div className="menu-item">
+                    <UserOutlined className="icon" /> Minha Conta
+                </div>
+                <div className="menu-item">
+                    <Badge count={0} size="small" color="#F59E0B">
+                        <ShoppingCartOutlined className="icon" style={{ fontSize: '20px' }} />
+                    </Badge>
+                </div>
+            </div>
+        </div>
     );
-}
+};
+

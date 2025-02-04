@@ -16,7 +16,7 @@ export default function Header() {
             </div>
             <div className="menu-icons">
                 <div className="menu-item">
-                    <QuestionCircleOutlined className="icon" /> Atendimento
+                    <QuestionCircleOutlined className="icon" /> Atendimentoooo
                 </div>
                 <div className="menu-item">
                     <UserOutlined className="icon" /> Minha Conta

@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #004D4D;
+    background-color: #DD6B04;
     padding: 10px 20px;
     color: white;
     font-family: Arial, sans-serif;
@@ -14,6 +14,12 @@
     font-size: 24px;
     font-weight: bold;
     color: #ff002b;
+    
+}
+
+.img-logo {
+    width: 200px;
+    height: 100%;
 }
 
 .logo .highlight {

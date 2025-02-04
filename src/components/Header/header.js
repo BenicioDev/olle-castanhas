@@ -3,11 +3,18 @@ import { Input, Badge } from 'antd';
 import { SearchOutlined, ShoppingCartOutlined, UserOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import './header.css';
 import { Link } from 'react-router-dom';
+import { Image } from 'antd';
+
 
 export default function Header() {
     return (
         <div className="header-container">
-            <div className="logo"> <Link to="/">LOGO</Link></div>
+            <div className="logo">
+                <img
+                    class="img-logo"
+                    src="/header/ollie-semBG.png"
+                />
+            </div>
             <div className="search-bar">
                 <Input
                     placeholder="O que deseja procurar?"

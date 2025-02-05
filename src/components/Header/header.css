@@ -55,3 +55,6 @@
 .menu-item:hover {
     text-decoration: underline;
 }
+.custom-font {
+    font-family:Verdana; 
+}

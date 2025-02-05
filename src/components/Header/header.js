@@ -8,7 +8,7 @@ import { Image } from 'antd';
 
 export default function Header() {
     return (
-        <div className="header-container">
+        <div className="header-container custom-font">
             <div className="logo">
                 <Image
                     class="img-logo"
@@ -22,6 +22,7 @@ export default function Header() {
                 <Input
                     placeholder="O que deseja procurar?"
                     prefix={<SearchOutlined style={{ color: '#004D4D' }} />}
+                    style={{ fontfamily: 'Arial, sans-serif'}}
                 />
             </div>
             <div className="menu-icons">

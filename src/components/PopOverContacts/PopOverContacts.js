@@ -11,7 +11,7 @@ const PopOverContact = () => {
                     <PhoneOutlined className='icon-ppo' />
                     <div>
                         <span className="label">Compre por telefone</span><br />
-                        <a href="tel:+551123371245" className="contact-link">(11) 2337-1245</a>
+                        <a href="tel:+5585999999" className="contact-link">(85) 9999-9999</a>
                     </div>
                 </li>
                 <hr />

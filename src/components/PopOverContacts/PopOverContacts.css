@@ -1,0 +1,57 @@
+.popover-content {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.icon-ppo {
+    font-size: 20px;
+    color: #DD6B04;
+    margin-right: 10px;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contact-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.working-hours {
+    font-size: 13px;
+    color: #555;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.menu-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item .icon {
+    margin-right: 5px;
+    font-size: 18px;
+}

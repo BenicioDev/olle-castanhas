@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Card, List, Image, Spin } from "antd";
 import { realtimeDB } from "../../firebaseConfig";
+
+const { Meta } = Card;
 
 const Produtos = () => {
   const [products, setProducts] = useState([]);
@@ -31,21 +34,33 @@ const Produtos = () => {
     fetchProducts();
   }, []);
 
-  if (loading) return <p>Carregando produtos...</p>;
+  if (loading) return (
+    <div style={{ padding: '20px' }}>
+      <List>
+        <Spin tip="Carregando produtos..." />
+      </List>
+    </div>
+  )
 
   return (
-    <div>
-      <h2>Lista de Produtos</h2>
-      <ul>
-        {products.map((produto) => (
-          <li key={produto.id}>
-            <h3>{produto.nome}</h3>
-            <p>{produto.descricao}</p>
-            <p>Preço: R$ {produto.valor}</p>
-            <img src={produto.pic} alt={produto.nome} width="100" />
-          </li>
-        ))}
-      </ul>
+    <div style={{ padding: '20px' }}>
+      <List
+        grid={{ gutter: 16, column: 3 }}
+        dataSource={products}
+        renderItem={produto => (
+          <List.Item>
+            <Card
+              hoverable
+              cover={<Image alt={produto.nome} src={produto.pic} width={300} height={200} style={{ objectFit: 'cover' }} />}
+            >
+              <Meta title={produto.nome} description={produto.descricao} />
+              <p style={{ marginTop: '10px', fontWeight: 'bold' }}>
+                {produto.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+              </p>
+            </Card>
+          </List.Item>
+        )}
+      />
     </div>
   );
 };

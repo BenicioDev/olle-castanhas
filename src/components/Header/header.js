@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Badge } from 'antd';
+import { Input, Badge, Popover } from 'antd';
 import { SearchOutlined, ShoppingCartOutlined, UserOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import './header.css';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ export default function Header() {
                     class="img-logo"
                     width={195}
                     height={65}
-                    style={{borderRadius: '6px'}}
+                    style={{ borderRadius: '6px' }}
                     src="/header/ultima.png"
                 />
             </div>
@@ -25,9 +25,13 @@ export default function Header() {
                 />
             </div>
             <div className="menu-icons">
-                <div className="menu-item">
-                    <QuestionCircleOutlined className="icon" /> Atendimento
-                </div>
+                
+                <Popover content="Em breve" title="Aviso">
+                    <div className="menu-item">
+                        <QuestionCircleOutlined className="icon" /> Atendimento
+                    </div>
+                </Popover>
+
                 <div className="menu-item">
                     <UserOutlined className="icon" /> Minha Conta
                 </div>
